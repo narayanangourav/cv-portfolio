@@ -1,0 +1,121 @@
+import Image from 'next/image'
+import { Mail, MapPin } from 'lucide-react'
+import { type ResumeData } from '@/types'
+import { PORTFOLIO_CONTENT } from '@/data/portfolio-content'
+import { type SkillGroup } from '@/lib/portfolio-view-model'
+import { getPublicPath } from '@/lib/public-path'
+
+interface ProfileSidebarProps {
+	data: ResumeData
+	skillGroups: SkillGroup[]
+	additionalSkills: string[]
+}
+
+export function ProfileSidebar({
+	data,
+	skillGroups,
+	additionalSkills
+}: ProfileSidebarProps): React.ReactElement {
+	return (
+		<aside
+			id='portfolio-profile-sidebar'
+			className='portfolio-profile-sidebar'
+			aria-label='Profile summary'
+		>
+			<div className='portfolio-profile-header'>
+				<div className='portfolio-avatar-wrap'>
+					<Image
+						className='portfolio-avatar'
+						src={getPublicPath(data.avatar)}
+						alt={`${data.name} portrait`}
+						width={140}
+						height={140}
+						priority
+					/>
+				</div>
+				<h1 className='portfolio-profile-name'>{data.name}</h1>
+				<p className='portfolio-profile-role'>{PORTFOLIO_CONTENT.sidebarIntro}</p>
+				<div className='portfolio-social-list'>
+					{data.contact.social.map((social) => {
+						const SocialIcon = social.icon
+						return (
+							<a
+								id={`profile-social-${social.name.toLowerCase()}`}
+								key={social.name}
+								className='portfolio-social-link'
+								href={social.url}
+								target='_blank'
+								rel='noreferrer'
+								aria-label={social.name}
+								data-tooltip={social.name}
+							>
+								<SocialIcon className='portfolio-social-icon' />
+							</a>
+						)
+					})}
+					<a
+						id='profile-social-email'
+						className='portfolio-social-link'
+						href={`mailto:${data.contact.email.at}`}
+						aria-label={data.contact.email.name}
+						data-tooltip={data.contact.email.name}
+					>
+						<Mail className='portfolio-social-icon' aria-hidden='true' />
+					</a>
+				</div>
+			</div>
+
+			<div className='portfolio-profile-meta'>
+				<span>City</span>
+				<a id='profile-location-link' href={data.locationLink} target='_blank' rel='noreferrer'>
+					<MapPin aria-hidden='true' />
+					{data.location}
+				</a>
+			</div>
+
+			{skillGroups.map((group) => (
+				<section key={group.title} className='portfolio-skill-group'>
+					<h2>{group.title}</h2>
+					{group.items.map((skill) => (
+						<div key={skill} className='portfolio-skill-row'>
+							<span>{skill}</span>
+						</div>
+					))}
+				</section>
+			))}
+
+			<section className='portfolio-extra-skills'>
+				<h2>Extra Skills</h2>
+				<ul>
+					{additionalSkills.map((skill) => (
+						<li key={skill}>{skill}</li>
+					))}
+				</ul>
+			</section>
+			<section className='portfolio-profile-list'>
+				<h2>Languages</h2>
+				<ul>
+					{data.languages.map((language) => (
+						<li key={language}>{language}</li>
+					))}
+				</ul>
+			</section>
+			<section className='portfolio-profile-list'>
+				<h2>Certifications</h2>
+				<ul>
+					{data.certifications.map((certification) => (
+						<li key={certification}>{certification}</li>
+					))}
+				</ul>
+			</section>
+			<section className='portfolio-profile-list'>
+				<h2>Highlights</h2>
+				<ul>
+					{data.achievements.map((achievement) => (
+						<li key={achievement.title}>{achievement.title}</li>
+					))}
+				</ul>
+			</section>
+		</aside>
+	)
+}

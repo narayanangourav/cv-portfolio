@@ -1,0 +1,14 @@
+{
+	"name": "Software Developer Portfolio",
+	"short_name": "NG Portfolio",
+	"description": "Software Developer with full stack engineering and CI/CD automation experience",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#F7E49B",
+	"orientation": "portrait-primary",
+	"icons": [],
+	"categories": ["business", "productivity"],
+	"lang": "en",
+	"dir": "ltr"
+}

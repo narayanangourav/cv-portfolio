@@ -1,0 +1,134 @@
+NARAYANA N GOURAV
+Software Developer
+
+Location: Greater Bengaluru Area
+Email: narayana.n.gourav@gmail.com
+LinkedIn: https://www.linkedin.com/in/narayana-n-gourav
+GitHub: https://github.com/narayanangourav/
+
+PROFESSIONAL SUMMARY
+
+Software Developer with 2+ years of experience building full-stack systems and
+cloud-native products that perform reliably under production pressure.
+
+At Chimple Learning, I work on an educational mobile application with more than
+100K Google Play downloads. My recent work includes serverless operations
+tooling, RPC and REST APIs, PostgreSQL migrations, SQL performance, offline data
+reliability, production authentication, and automated GitHub Actions workflows.
+
+Previously at Continental, I built production-grade Python and Flask tools for
+Polyspace reporting, GitHub Enterprise analytics, release-impact analysis,
+cross-repository dependency comparison, and downloadable reporting.
+
+EXPERIENCE
+
+Chimple Learning | Bengaluru
+
+Software Developer | July 2025 - Present
+
+- Developing and enhancing an educational mobile application with 100K+ Google
+  Play downloads across feature engineering, architecture, and performance.
+- Architected a serverless operations console using RPC and REST APIs for
+  real-time data visibility and production-ready data pipelines.
+- Engineered a zero-failure PostgreSQL migration pipeline from development to
+  production with end-to-end GitHub Actions automation.
+- Optimized SQL queries and data flows to reduce load times and strengthen
+  offline reliability in low-connectivity environments.
+- Built serverless authentication pipelines that onboarded 5,000+ production
+  users and improved user activation flows.
+- Resolved critical synchronization bugs and edge cases, improving application
+  stability and uptime.
+
+Associate Software Developer | January 2025 - June 2025
+
+- Contributed to feature engineering, backend integration, and reliability
+  improvements for Chimple Learning's educational mobile platform.
+
+Continental | Bengaluru
+
+Software Engineer Intern | November 2023 - October 2024
+
+- Delivered a Python automation pipeline for Polyspace static-analysis releases
+  and a Flask-based GitHub Enterprise analytics platform.
+- Automated Polyspace report generation with OpenPyXL, win32com, VBA macros,
+  Robocopy artifact packaging, and shared-drive publishing.
+- Integrated GitHub Enterprise REST APIs to extract commits, pull requests,
+  Jira references, and dependency deltas, cutting release-impact analysis time
+  by 80%.
+- Built MongoDB-backed report persistence, Pandas/OpenPyXL exports, and
+  recursive multi-level tag dependency comparison.
+- Hardened both tools with structured logging, JSON configuration, error
+  handling, retry logic, and a Jinja2 interface.
+
+EDUCATION
+
+Ramaiah Institute of Technology
+Master of Technology in Computer Science and Engineering
+February 2023 - August 2024
+
+Presidency University Bangalore
+Bachelor of Technology in Computer Science and Engineering
+August 2018 - November 2022
+
+SELECTED PROJECTS
+
+Chimple Serverless Operations Console
+Technologies: TypeScript, React, PostgreSQL, RPC APIs, REST APIs
+Architected an operations console for real-time production data visibility and
+lower interaction latency.
+Link: https://www.chimple.org/
+
+Zero-Failure Database Migration Pipeline
+Technologies: PostgreSQL, GitHub Actions, SQL
+Automated repeatable database migration from development to production with no
+manual intervention.
+Link: https://www.chimple.org/
+
+Production Authentication Pipeline
+Technologies: Serverless Functions, REST APIs, PostgreSQL
+Built authentication and onboarding pipelines that moved 5,000+ users into
+production reliably.
+Link: https://www.chimple.org/
+
+Polyspace Release Automation
+Technologies: Python, OpenPyXL, VBA, Robocopy
+Automated static-analysis reports, macro execution, artifact packaging, and
+shared-drive publishing across Polyspace tool versions.
+Link: https://github.com/narayanangourav/
+
+GitHub Enterprise Analytics Platform
+Technologies: Flask, MongoDB, Pandas, Jinja2, GitHub REST API
+Created traceable cross-repository release analysis with recursive dependency
+comparison and downloadable Excel reports.
+Link: https://github.com/narayanangourav/
+
+TECHNICAL SKILLS
+
+Top Skills: IntelliJ IDEA, CloudSim, Pandas
+Languages: Python, Java, TypeScript, JavaScript, SQL
+Frameworks and Data: React, Flask, Jinja2, Pandas, OpenPyXL, VBA
+Cloud and DevOps: AWS, Docker, Kubernetes, GitHub Actions, Git
+Data and Architecture: MongoDB, PostgreSQL, Serverless Functions, RPC APIs,
+REST APIs, Microservices
+Automation: Robocopy, JSON Configuration
+
+SPOKEN LANGUAGES
+
+- Telugu: Native or Bilingual
+- English: Native or Bilingual
+- Hindi: Native or Bilingual
+- Kannada: Native or Bilingual
+
+CERTIFICATIONS
+
+- Python (Basic) Certificate
+- Introduction to Python
+- Java (Basic)
+- Crash Course on Python
+- Windows Server Management and Security
+
+HONORS AND PUBLICATIONS
+
+- Best Project Award
+- "Improving The Performance of An Advanced Algorithm for Task flow Scheduling
+  In Cloud Computing"
