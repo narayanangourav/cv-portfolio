@@ -35,7 +35,7 @@ module.exports = {
 		'react/jsx-no-target-blank': [2, { allowReferrer: false }],
 		'react/prop-types': 'off',
 
-		// Disabled rules to fix Vercel build errors
+		// Disabled rules retained for compatibility with the current project code
 		'no-mixed-spaces-and-tabs': 'off',
 		'@typescript-eslint/no-unused-vars': 'off',
 		'@typescript-eslint/no-unsafe-argument': 'off',

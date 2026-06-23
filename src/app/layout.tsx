@@ -4,8 +4,6 @@ import { type Metadata, type Viewport } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { RESUME_DATA } from '@/data/resume-data'
 import { cn } from '@/lib/utils'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { getPublicPath } from '@/lib/public-path'
 import './globals.css'
 import './portfolio.css'
@@ -62,8 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='en' suppressHydrationWarning className={GeistSans.variable}>
 			<body className={cn('min-h-screen bg-background font-sans antialiased', GeistSans.variable)}>
 				{children}
-				<Analytics />
-				<SpeedInsights />
 			</body>
 		</html>
 	)
