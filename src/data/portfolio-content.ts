@@ -54,6 +54,9 @@ export const PORTFOLIO_CONTENT = {
 		recommendations: 'Measured outcomes',
 		education: 'Academic background',
 		work: 'Career history',
+		publications: 'Published work',
+		certifications: 'Professional learning',
+		awards: 'Recognition',
 		portfolio: 'Selected work'
 	},
 	sectionTitles: {
@@ -62,6 +65,9 @@ export const PORTFOLIO_CONTENT = {
 		recommendations: 'Impact Highlights',
 		education: 'Education',
 		work: 'Work History',
+		publications: 'Publication',
+		certifications: 'Certifications',
+		awards: 'Honors & Awards',
 		portfolio: 'Portfolio'
 	},
 	sectionDescriptions: {
@@ -73,6 +79,9 @@ export const PORTFOLIO_CONTENT = {
 			'Recent results delivered across product reliability, user onboarding, and engineering automation.',
 		education: 'Formal education supporting a practical background in software engineering.',
 		work: 'Recent experience building production systems and engineering automation.',
+		publications: 'Research contribution from academic work in cloud computing scheduling.',
+		certifications: 'Completed certifications and structured professional learning.',
+		awards: 'Recognition for academic project work in cloud workflow scheduling.',
 		portfolio: 'A selection of application, automation, and DevOps work.'
 	},
 	statLabels: {
@@ -80,6 +89,9 @@ export const PORTFOLIO_CONTENT = {
 		projects: 'Projects',
 		companies: 'Companies',
 		skills: 'Skills'
+	},
+	certificationLabels: {
+		skills: 'Skills:'
 	},
 	services: [
 		{
@@ -179,8 +191,12 @@ export const PORTFOLIO_NAVIGATION: NavigationItem[] = [
 	{ id: 'home', label: 'Home' },
 	{ id: 'about', label: 'About' },
 	{ id: 'services', label: 'Services' },
+	{ id: 'recommendations', label: 'Impact' },
 	{ id: 'education', label: 'Education' },
 	{ id: 'work', label: 'Work' },
+	{ id: 'publications', label: 'Publication' },
+	{ id: 'certifications', label: 'Certifications' },
+	{ id: 'awards', label: 'Awards' },
 	{ id: 'portfolio', label: 'Portfolio' }
 ]
 

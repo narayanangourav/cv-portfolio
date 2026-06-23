@@ -53,9 +53,45 @@ export interface PersonalWebsiteUrl {
 }
 
 export interface AchievementEntry {
+	id: string
 	title: string
+	issuer: string
+	date: string
+	associatedWith: string
 	description: string
-	year: string
+	details: string[]
+}
+
+export interface PublicationEntry {
+	id: string
+	title: string
+	source: string
+	date: string
+	link: ProjectLink
+	description: string[]
+}
+
+export interface AwardEntry {
+	id: string
+	title: string
+	issuer: string
+	date: string
+	associatedWith: string
+	description: string
+	details: string[]
+}
+
+export interface CertificationSkill {
+	name: string
+	url?: string
+}
+
+export interface CertificationEntry {
+	id: string
+	title: string
+	issuer?: string
+	link?: ProjectLink
+	skills?: CertificationSkill[]
 }
 
 export interface Project {
@@ -80,7 +116,9 @@ export interface ResumeData {
 	education: EducationEntry[]
 	work: WorkEntry[]
 	achievements: AchievementEntry[]
-	certifications: string[]
+	publications: PublicationEntry[]
+	awards: AwardEntry[]
+	certifications: CertificationEntry[]
 	languages: string[]
 	skills: string[]
 	projects: Project[]

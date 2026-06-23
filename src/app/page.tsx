@@ -9,7 +9,7 @@ import { ServicesSection } from '@/components/portfolio/services-section'
 import { SidebarScrollButton } from '@/components/portfolio/sidebar-scroll-button'
 import { data } from '@/constants'
 import { PORTFOLIO_CONTENT } from '@/data/portfolio-content'
-import { getAdditionalSkills, getPortfolioStats, getSkillGroups } from '@/lib/portfolio-view-model'
+import { getPortfolioStats, getSkillGroups, getSummaryParagraphs } from '@/lib/portfolio-view-model'
 
 const structuredData = {
 	'@context': 'https://schema.org',
@@ -28,8 +28,8 @@ const structuredData = {
 
 export default function Page(): React.ReactElement {
 	const skillGroups = getSkillGroups(data)
-	const additionalSkills = getAdditionalSkills(data)
 	const portfolioStats = getPortfolioStats(data)
+	const summaryParagraphs = getSummaryParagraphs(data)
 
 	return (
 		<>
@@ -42,20 +42,22 @@ export default function Page(): React.ReactElement {
 			</a>
 			<div className='portfolio-page-shell'>
 				<div className='portfolio-sidebar-shell'>
-					<ProfileSidebar
-						data={data}
-						skillGroups={skillGroups}
-						additionalSkills={additionalSkills}
-					/>
+					<ProfileSidebar data={data} skillGroups={skillGroups} />
 					<SidebarScrollButton />
 				</div>
 				<PortfolioNavigation />
 				<main id='main-content' className='portfolio-main-content'>
 					<PageScrollButton />
 					<HeroSection data={data} />
-					<AboutSection summary={data.summary} stats={portfolioStats} />
+					<AboutSection summaryParagraphs={summaryParagraphs} stats={portfolioStats} />
 					<ServicesSection />
-					<ResumeSections education={data.education} work={data.work} />
+					<ResumeSections
+						education={data.education}
+						work={data.work}
+						publications={data.publications}
+						certifications={data.certifications}
+						awards={data.awards}
+					/>
 					<PortfolioAndBlog projects={data.projects} />
 					<footer className='portfolio-footer'>
 						<p>

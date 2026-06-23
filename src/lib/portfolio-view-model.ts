@@ -12,11 +12,80 @@ export interface PortfolioStat {
 	label: string
 }
 
+const PARAGRAPH_SEPARATOR_PATTERN = /\n{2,}/
+
 const SKILL_GROUPS = [
-	{ title: 'Top Skills', names: ['IntelliJ IDEA', 'CloudSim', 'Pandas'] },
-	{ title: 'Languages', names: ['Python', 'Java', 'TypeScript', 'JavaScript', 'SQL'] },
-	{ title: 'Frameworks & Data', names: ['React', 'Flask', 'OpenPyXL', 'Jinja2'] },
-	{ title: 'Cloud & DevOps', names: ['AWS', 'Docker', 'Kubernetes', 'GitHub Actions'] }
+	{
+		title: 'Languages',
+		names: [
+			'Python',
+			'Java',
+			'NodeJS',
+			'TypeScript',
+			'JavaScript',
+			'SQL',
+			'HTML/CSS',
+			'Jinja',
+			'VBA',
+			'Shell Scripting (Bash)'
+		]
+	},
+	{
+		title: 'Frameworks &Libraries',
+		names: [
+			'React',
+			'Flask',
+			'Android Studio',
+			'Gradle',
+			'Material UI',
+			'Bulma',
+			'Capacitor',
+			'Sentry',
+			'Jest'
+		]
+	},
+	{
+		title: 'DevOps &CI/CD',
+		names: [
+			'Jenkins',
+			'Maven',
+			'SonarQube',
+			'Trivy',
+			'Nexus',
+			'Docker',
+			'Kubernetes (K8s)',
+			'GitHub Actions',
+			'Git'
+		]
+	},
+	{
+		title: 'Cloud & Monitoring',
+		names: ['AWS', 'Prometheus', 'Grafana', 'Linux', 'Apache Tomcat', 'Unix']
+	},
+	{
+		title: 'Databases',
+		names: ['Firebase', 'Supabase', 'MongoDB', 'PostgreSQL', 'MySQL', 'SQLite']
+	},
+	{
+		title: 'Development Concepts',
+		names: [
+			'Containerization',
+			'REST APIs',
+			'TDD',
+			'SOLID Principles',
+			'Clean Code',
+			'Microservices'
+		]
+	},
+	{
+		title: 'Professional Skills',
+		names: [
+			'Project Management',
+			'Problem Solving',
+			'Agile Methodologies',
+			'Cross-functional Collaboration'
+		]
+	}
 ] as const
 
 export function getSkillGroups(data: ResumeData): SkillGroup[] {
@@ -26,9 +95,11 @@ export function getSkillGroups(data: ResumeData): SkillGroup[] {
 	}))
 }
 
-export function getAdditionalSkills(data: ResumeData): string[] {
-	const groupedSkills = new Set<string>(SKILL_GROUPS.flatMap((group) => group.names))
-	return data.skills.filter((skill) => !groupedSkills.has(skill))
+export function getSummaryParagraphs(data: ResumeData): string[] {
+	return data.summary
+		.split(PARAGRAPH_SEPARATOR_PATTERN)
+		.map((paragraph) => paragraph.trim())
+		.filter((paragraph) => paragraph.length > 0)
 }
 
 export function getPortfolioStats(data: ResumeData): PortfolioStat[] {

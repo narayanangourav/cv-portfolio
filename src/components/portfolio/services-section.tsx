@@ -24,7 +24,7 @@ export function ServicesSection(): React.ReactElement {
 				</div>
 			</section>
 
-			<section className='portfolio-section portfolio-recommendations-section'>
+			<section id='recommendations' className='portfolio-section portfolio-recommendations-section'>
 				<SectionHeading
 					eyebrow={PORTFOLIO_CONTENT.sectionEyebrows.recommendations}
 					title={PORTFOLIO_CONTENT.sectionTitles.recommendations}

@@ -8,14 +8,9 @@ import { getPublicPath } from '@/lib/public-path'
 interface ProfileSidebarProps {
 	data: ResumeData
 	skillGroups: SkillGroup[]
-	additionalSkills: string[]
 }
 
-export function ProfileSidebar({
-	data,
-	skillGroups,
-	additionalSkills
-}: ProfileSidebarProps): React.ReactElement {
+export function ProfileSidebar({ data, skillGroups }: ProfileSidebarProps): React.ReactElement {
 	return (
 		<aside
 			id='portfolio-profile-sidebar'
@@ -84,35 +79,11 @@ export function ProfileSidebar({
 				</section>
 			))}
 
-			<section className='portfolio-extra-skills'>
-				<h2>Extra Skills</h2>
-				<ul>
-					{additionalSkills.map((skill) => (
-						<li key={skill}>{skill}</li>
-					))}
-				</ul>
-			</section>
 			<section className='portfolio-profile-list'>
 				<h2>Languages</h2>
 				<ul>
 					{data.languages.map((language) => (
 						<li key={language}>{language}</li>
-					))}
-				</ul>
-			</section>
-			<section className='portfolio-profile-list'>
-				<h2>Certifications</h2>
-				<ul>
-					{data.certifications.map((certification) => (
-						<li key={certification}>{certification}</li>
-					))}
-				</ul>
-			</section>
-			<section className='portfolio-profile-list'>
-				<h2>Highlights</h2>
-				<ul>
-					{data.achievements.map((achievement) => (
-						<li key={achievement.title}>{achievement.title}</li>
 					))}
 				</ul>
 			</section>

@@ -3,11 +3,11 @@ import { type PortfolioStat } from '@/lib/portfolio-view-model'
 import { SectionHeading } from './section-heading'
 
 interface AboutSectionProps {
-	summary: string
+	summaryParagraphs: string[]
 	stats: PortfolioStat[]
 }
 
-export function AboutSection({ summary, stats }: AboutSectionProps): React.ReactElement {
+export function AboutSection({ summaryParagraphs, stats }: AboutSectionProps): React.ReactElement {
 	return (
 		<section id='about' className='portfolio-section'>
 			<SectionHeading
@@ -17,7 +17,9 @@ export function AboutSection({ summary, stats }: AboutSectionProps): React.React
 			/>
 			<div className='portfolio-about-panel'>
 				<div className='portfolio-about-profile'>
-					<p>{summary}</p>
+					{summaryParagraphs.map((paragraph) => (
+						<p key={paragraph}>{paragraph}</p>
+					))}
 				</div>
 				<div className='portfolio-stats-grid'>
 					{stats.map((stat) => (

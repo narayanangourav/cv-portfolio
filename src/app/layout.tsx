@@ -17,13 +17,16 @@ export const metadata: Metadata = {
 		'Full Stack Developer',
 		'Python',
 		'Java',
+		'NodeJS',
 		'TypeScript',
 		'React',
 		'PostgreSQL',
 		'AWS',
 		'CI/CD',
 		'Docker',
-		'GitHub Actions'
+		'GitHub Actions',
+		'Jenkins',
+		'Kubernetes'
 	],
 	authors: [{ name: RESUME_DATA.name }],
 	creator: RESUME_DATA.name,

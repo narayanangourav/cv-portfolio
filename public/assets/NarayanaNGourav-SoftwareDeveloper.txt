@@ -8,17 +8,34 @@ GitHub: https://github.com/narayanangourav/
 
 PROFESSIONAL SUMMARY
 
-Software Developer with 2+ years of experience building full-stack systems and
-cloud-native products that perform reliably under production pressure.
+Most software systems don't fail because of bad ideas - they fail because they
+can't scale when it matters most.
 
-At Chimple Learning, I work on an educational mobile application with more than
-100K Google Play downloads. My recent work includes serverless operations
-tooling, RPC and REST APIs, PostgreSQL migrations, SQL performance, offline data
-reliability, production authentication, and automated GitHub Actions workflows.
+I'm Narayana, a Software Engineer with 2+ years of experience building
+full-stack systems and cloud-native solutions that hold up under real pressure.
 
-Previously at Continental, I built production-grade Python and Flask tools for
-Polyspace reporting, GitHub Enterprise analytics, release-impact analysis,
-cross-repository dependency comparison, and downloadable reporting.
+The problem I keep solving? Products that work in demos but break in
+production. At Chimple Learning, I inherited an app with 100K+ downloads and a
+growing user base - and the infrastructure wasn't keeping pace. Data pipelines
+were fragile, SQL queries were slow, and onboarding was leaking users.
+
+So I got to work.
+
+I architected a serverless operations console using RPC and REST APIs that
+brought real-time data visibility to the team. I rebuilt the database migration
+pipeline from scratch - zero failures, fully automated via GitHub Actions. I
+optimized SQL queries and data flows to cut load times. I built authentication
+pipelines that onboarded 5,000+ users without a hitch. And I helped push
+application uptime for a system serving users across low-connectivity
+environments.
+
+Before that, at Continental AM, I automated project dependency analysis using
+Python and GitHub APIs - cutting manual effort by 70%. I also reduced Polyspace
+reporting time by 80% through custom automation scripts. Small numbers, big
+impact on engineering hours.
+
+I work across Python, Java, React, Docker, Kubernetes, AWS, and more - but what
+I care about most is that the system actually works when real users hit it.
 
 EXPERIENCE
 
@@ -104,13 +121,13 @@ Link: https://github.com/narayanangourav/
 
 TECHNICAL SKILLS
 
-Top Skills: IntelliJ IDEA, CloudSim, Pandas
-Languages: Python, Java, TypeScript, JavaScript, SQL
-Frameworks and Data: React, Flask, Jinja2, Pandas, OpenPyXL, VBA
-Cloud and DevOps: AWS, Docker, Kubernetes, GitHub Actions, Git
-Data and Architecture: MongoDB, PostgreSQL, Serverless Functions, RPC APIs,
-REST APIs, Microservices
-Automation: Robocopy, JSON Configuration
+Languages: Python, Java, NodeJS, TypeScript, JavaScript, SQL, HTML/CSS, Jinja, VBA, Shell Scripting (Bash)
+Frameworks &Libraries: React, Flask, Android Studio, Gradle, Material UI, Bulma, Capacitor, Sentry, Jest
+DevOps &CI/CD: Jenkins, Maven, SonarQube, Trivy, Nexus, Docker, Kubernetes (K8s), GitHub Actions, Git
+Cloud & Monitoring: AWS, Prometheus, Grafana, Linux, Apache Tomcat, Unix
+Databases: Firebase, Supabase, MongoDB, PostgreSQL, MySQL, SQLite
+Development Concepts: Containerization, REST APIs, TDD, SOLID Principles, Clean Code, Microservices
+Professional Skills: Project Management, Problem Solving, Agile Methodologies, Cross-functional Collaboration
 
 SPOKEN LANGUAGES
 
@@ -119,16 +136,38 @@ SPOKEN LANGUAGES
 - Hindi: Native or Bilingual
 - Kannada: Native or Bilingual
 
+PUBLICATIONS
+
+Improving The Performance of An Advanced Algorithm for Task flow Scheduling In Cloud Computing
+Seybold-Report · Apr 15, 2024
+Show publication: https://seybold-report.com/index.php/narayana-2/
+
+Developed and evaluated an advanced taskflow scheduling approach for cloud computing environments using Java and CloudSim.
+
+The project focused on improving the Max-Min scheduling algorithm to optimize cloud workflow execution, reduce makespan, improve response time, and increase resource utilization.
+
+The enhanced algorithm was benchmarked against traditional scheduling methods such as FCFS, SJF, and Round Robin, using performance metrics including makespan, throughput, average waiting time, and average response time.
+
+The results showed that the Improved Max-Min algorithm delivered better scheduling performance in most tested cases by dynamically allocating tasks based on workload requirements and available cloud resources.
+
 CERTIFICATIONS
 
 - Python (Basic) Certificate
 - Introduction to Python
 - Java (Basic)
 - Crash Course on Python
-- Windows Server Management and Security
 
-HONORS AND PUBLICATIONS
+Windows Server Management and Security
+Coursera
+Show credential: https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww%2Ecoursera%2Eorg%2Faccount%2Faccomplishments%2Fverify%2F5BS44SZVYUJQ&urlhash=xec-&mt=fBKcxT-fsJ_i1M07g_aZNcBF1lrLXumoboudBT6jyJmA7xGJB8aQWu-CN5Gxhf-ty96OD8axYkDMMdFU0dNgszVOntg&isSdui=true
+Skills: Windows, Security
 
-- Best Project Award
-- "Improving The Performance of An Advanced Algorithm for Task flow Scheduling
-  In Cloud Computing"
+HONORS & AWARDS
+
+Best Project Award
+Issued by Ramaiah Institute Of Technology, Alumni Association · May 2024
+Associated with Ramaiah Institute Of Technology
+
+Received the Best Project Award from the Ramaiah Institute of Technology Alumni Association in May 2024 for the project "Enhancing workflow scheduling in cloud computing with a bio-inspired algorithm."
+
+The project focused on improving cloud task scheduling using Java and CloudSim by optimizing resource allocation, reducing execution time, and improving workflow performance through an enhanced scheduling algorithm.

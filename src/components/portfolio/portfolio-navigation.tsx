@@ -2,18 +2,33 @@
 
 import { useState } from 'react'
 import {
+	BadgeCheck,
 	Briefcase,
+	FileText,
 	GraduationCap,
 	Home,
 	LayoutGrid,
 	Menu,
+	Star,
+	Trophy,
 	UserRound,
 	Wrench,
 	X
 } from 'lucide-react'
 import { PORTFOLIO_NAVIGATION } from '@/data/portfolio-content'
 
-const NAVIGATION_ICONS = [Home, UserRound, Wrench, GraduationCap, Briefcase, LayoutGrid] as const
+const NAVIGATION_ICONS = [
+	Home,
+	UserRound,
+	Wrench,
+	Star,
+	GraduationCap,
+	Briefcase,
+	FileText,
+	BadgeCheck,
+	Trophy,
+	LayoutGrid
+] as const
 
 export function PortfolioNavigation(): React.ReactElement {
 	const [isOpen, setIsOpen] = useState(false)

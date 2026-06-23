@@ -8,9 +8,9 @@ export const RESUME_DATA = {
 	location: 'Greater Bengaluru Area',
 	locationLink: 'https://www.google.com/maps/place/Bengaluru',
 	about:
-		'Software Developer with 2+ years of experience building reliable full-stack systems and cloud-native products.',
+		"Most software systems don't fail because of bad ideas - they fail because they can't scale when it matters most.",
 	summary:
-		'I turn systems that work in demos into dependable products that hold up in production. My recent work spans serverless operations tooling, PostgreSQL data pipelines, authentication at scale, offline reliability, and automated release analysis.',
+		"Most software systems don't fail because of bad ideas - they fail because they can't scale when it matters most.\n\nI'm Narayana, a Software Engineer with 2+ years of experience building full-stack systems and cloud-native solutions that hold up under real pressure.\n\nThe problem I keep solving? Products that work in demos but break in production. At Chimple Learning, I inherited an app with 100K+ downloads and a growing user base - and the infrastructure wasn't keeping pace. Data pipelines were fragile, SQL queries were slow, and onboarding was leaking users.\n\nSo I got to work.\n\nI architected a serverless operations console using RPC and REST APIs that brought real-time data visibility to the team. I rebuilt the database migration pipeline from scratch - zero failures, fully automated via GitHub Actions. I optimized SQL queries and data flows to cut load times. I built authentication pipelines that onboarded 5,000+ users without a hitch. And I helped push application uptime for a system serving users across low-connectivity environments.\n\nBefore that, at Continental AM, I automated project dependency analysis using Python and GitHub APIs - cutting manual effort by 70%. I also reduced Polyspace reporting time by 80% through custom automation scripts. Small numbers, big impact on engineering hours.\n\nI work across Python, Java, React, Docker, Kubernetes, AWS, and more - but what I care about most is that the system actually works when real users hit it.",
 	avatar: '/assets/avatar.jpg',
 	personalWebsiteUrl: {
 		name: 'GitHub',
@@ -103,9 +103,16 @@ export const RESUME_DATA = {
 	],
 	achievements: [
 		{
+			id: 'best-project-award',
 			title: 'Best Project Award',
-			description: 'Recognized for delivering an outstanding software project.',
-			year: ''
+			issuer: 'Ramaiah Institute Of Technology, Alumni Association',
+			date: 'May 2024',
+			associatedWith: 'Ramaiah Institute Of Technology',
+			description:
+				'Received the Best Project Award from the Ramaiah Institute of Technology Alumni Association in May 2024 for the project "Enhancing workflow scheduling in cloud computing with a bio-inspired algorithm."',
+			details: [
+				'The project focused on improving cloud task scheduling using Java and CloudSim by optimizing resource allocation, reducing execution time, and improving workflow performance through an enhanced scheduling algorithm.'
+			]
 		},
 		{
 			title: 'Research Publication',
@@ -114,12 +121,75 @@ export const RESUME_DATA = {
 			year: ''
 		}
 	],
+	publications: [
+		{
+			id: 'cloud-taskflow-scheduling',
+			title:
+				'Improving The Performance of An Advanced Algorithm for Task flow Scheduling In Cloud Computing',
+			source: 'Seybold-Report',
+			date: 'Apr 15, 2024',
+			link: {
+				label: 'Show publication',
+				href: 'https://seybold-report.com/index.php/narayana-2/'
+			},
+			description: [
+				'Developed and evaluated an advanced taskflow scheduling approach for cloud computing environments using Java and CloudSim.',
+				'The project focused on improving the Max-Min scheduling algorithm to optimize cloud workflow execution, reduce makespan, improve response time, and increase resource utilization.',
+				'The enhanced algorithm was benchmarked against traditional scheduling methods such as FCFS, SJF, and Round Robin, using performance metrics including makespan, throughput, average waiting time, and average response time.',
+				'The results showed that the Improved Max-Min algorithm delivered better scheduling performance in most tested cases by dynamically allocating tasks based on workload requirements and available cloud resources.'
+			]
+		}
+	],
 	certifications: [
-		'Python (Basic) Certificate',
-		'Introduction to Python',
-		'Java (Basic)',
-		'Crash Course on Python',
-		'Windows Server Management and Security'
+		{
+			id: 'python-basic-certificate',
+			title: 'Python (Basic) Certificate'
+		},
+		{
+			id: 'introduction-to-python',
+			title: 'Introduction to Python'
+		},
+		{
+			id: 'java-basic',
+			title: 'Java (Basic)'
+		},
+		{
+			id: 'crash-course-on-python',
+			title: 'Crash Course on Python'
+		},
+		{
+			id: 'windows-server-management-security',
+			title: 'Windows Server Management and Security',
+			issuer: 'Coursera',
+			link: {
+				label: 'Show credential',
+				href: 'https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww%2Ecoursera%2Eorg%2Faccount%2Faccomplishments%2Fverify%2F5BS44SZVYUJQ&urlhash=xec-&mt=fBKcxT-fsJ_i1M07g_aZNcBF1lrLXumoboudBT6jyJmA7xGJB8aQWu-CN5Gxhf-ty96OD8axYkDMMdFU0dNgszVOntg&isSdui=true'
+			},
+			skills: [
+				{
+					name: 'Windows',
+					url: 'https://www.linkedin.com/in/narayana-n-gourav/overlay/2082524535/skill-associations-details/'
+				},
+				{
+					name: 'Security',
+					url: 'https://www.linkedin.com/in/narayana-n-gourav/overlay/2082524535/skill-associations-details/'
+				}
+			]
+		}
+	],
+	awards: [
+		{
+			id: 'best-project-award',
+			title: 'Best Project Award',
+			issuer: 'Ramaiah Institute Of Technology, Alumni Association',
+			date: 'May 2024',
+			associatedWith: 'Ramaiah Institute Of Technology',
+			description:
+				'Received the Best Project Award from the Ramaiah Institute of Technology Alumni Association in May 2024 for the project "Enhancing workflow scheduling in cloud computing with a bio-inspired algorithm."',
+			details: [
+				'The project focused on improving cloud task scheduling using Java and CloudSim by optimizing resource allocation, reducing execution time, and improving workflow performance through an enhanced scheduling algorithm.'
+			]
+		}
 	],
 	languages: [
 		'Telugu — Native or Bilingual',
@@ -130,30 +200,54 @@ export const RESUME_DATA = {
 	skills: [
 		'Python',
 		'Java',
+		'NodeJS',
 		'TypeScript',
 		'JavaScript',
 		'SQL',
+		'HTML/CSS',
+		'Jinja',
+		'VBA',
+		'Shell Scripting (Bash)',
 		'React',
 		'Flask',
-		'Jinja2',
-		'Pandas',
-		'OpenPyXL',
-		'VBA',
-		'IntelliJ IDEA',
-		'CloudSim',
+		'Android Studio',
+		'Gradle',
+		'Material UI',
+		'Bulma',
+		'Capacitor',
+		'Sentry',
+		'Jest',
+		'Jenkins',
+		'Maven',
+		'SonarQube',
+		'Trivy',
+		'Nexus',
 		'Docker',
-		'Kubernetes',
+		'Kubernetes (K8s)',
 		'GitHub Actions',
 		'Git',
 		'AWS',
+		'Prometheus',
+		'Grafana',
+		'Linux',
+		'Apache Tomcat',
+		'Unix',
+		'Firebase',
+		'Supabase',
 		'MongoDB',
 		'PostgreSQL',
-		'Serverless Functions',
-		'RPC APIs',
+		'MySQL',
+		'SQLite',
+		'Containerization',
 		'REST APIs',
+		'TDD',
+		'SOLID Principles',
+		'Clean Code',
 		'Microservices',
-		'Robocopy',
-		'JSON Configuration'
+		'Project Management',
+		'Problem Solving',
+		'Agile Methodologies',
+		'Cross-functional Collaboration'
 	],
 	projects: [
 		{
