@@ -24,12 +24,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Configure GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -39,12 +33,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Build static site
         run: npm run build
         env:
           GITHUB_PAGES: 'true'
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path }}
+          NEXT_IGNORE_INCORRECT_LOCKFILE: '1'
+          NEXT_PUBLIC_BASE_PATH: /cv-portfolio
+          NEXT_PUBLIC_SITE_URL: https://narayanangourav.github.io/cv-portfolio
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

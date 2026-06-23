@@ -1,7 +1,3 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-	enabled: process.env.ANALYZE === 'true'
-})
-
 const isGitHubPages = process.env.GITHUB_PAGES === 'true'
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
@@ -69,4 +65,4 @@ const nextConfig = {
 			})
 }
 
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = nextConfig
