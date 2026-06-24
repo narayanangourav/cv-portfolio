@@ -11,6 +11,8 @@
 body {
 	background: var(--portfolio-muted);
 	color: var(--portfolio-ink);
+	overflow-x: hidden;
+	overflow-x: clip;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
@@ -39,6 +41,7 @@ body::-webkit-scrollbar {
 	display: grid;
 	grid-template-columns: 300px 84px minmax(0, 1fr);
 	gap: 1.75rem;
+	width: 100%;
 	max-width: 1600px;
 	margin: 0 auto;
 	padding: 0 1.75rem;
@@ -183,6 +186,7 @@ body::-webkit-scrollbar {
 	align-items: center;
 	justify-content: flex-end;
 	gap: 0.25rem;
+	min-width: 0;
 	border-radius: 999px;
 	padding: 0.15rem 0.45rem;
 	text-align: right;
@@ -197,6 +201,10 @@ body::-webkit-scrollbar {
 .portfolio-skill-group {
 	padding: 1.25rem 0;
 	border-bottom: 1px solid var(--portfolio-line);
+}
+
+.portfolio-sidebar-card-track {
+	display: contents;
 }
 
 .portfolio-skill-group h2 {
@@ -312,6 +320,7 @@ body::-webkit-scrollbar {
 
 .portfolio-hero-copy {
 	width: 100%;
+	min-width: 0;
 	padding: 4rem;
 }
 
@@ -417,6 +426,7 @@ body::-webkit-scrollbar {
 	color: var(--portfolio-copy);
 	font-size: 0.82rem;
 	line-height: 1.75;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-stats-grid {
@@ -489,6 +499,7 @@ body::-webkit-scrollbar {
 	color: var(--portfolio-copy);
 	font-size: 0.78rem;
 	line-height: 1.65;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-recommendations-grid {
@@ -541,6 +552,7 @@ body::-webkit-scrollbar {
 .portfolio-resume-description h4 {
 	font-size: 0.9rem;
 	font-weight: 600;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-resume-meta p {
@@ -629,6 +641,7 @@ body::-webkit-scrollbar {
 	color: var(--portfolio-copy);
 	font-size: 0.78rem;
 	line-height: 1.65;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-resume-description li {
@@ -683,16 +696,19 @@ body::-webkit-scrollbar {
 	font-size: 0.95rem;
 	font-weight: 650;
 	line-height: 1.5;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-publication-meta {
 	margin-top: 0.55rem;
 	color: var(--portfolio-copy);
 	font-size: 0.75rem;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-publication-link {
 	display: inline-flex;
+	align-items: center;
 	margin-top: 0.9rem;
 	background: var(--portfolio-amber);
 	border-radius: 999px;
@@ -716,6 +732,7 @@ body::-webkit-scrollbar {
 	color: var(--portfolio-copy);
 	font-size: 0.8rem;
 	line-height: 1.7;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-certification-card {
@@ -730,6 +747,7 @@ body::-webkit-scrollbar {
 	font-size: 0.95rem;
 	font-weight: 650;
 	line-height: 1.5;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-certification-issuer {
@@ -744,6 +762,7 @@ body::-webkit-scrollbar {
 	color: var(--portfolio-copy);
 	font-size: 0.76rem;
 	line-height: 1.7;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-certification-skills span:first-child {
@@ -764,6 +783,7 @@ body::-webkit-scrollbar {
 	font-size: 0.95rem;
 	font-weight: 650;
 	line-height: 1.5;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-award-association {
@@ -771,6 +791,7 @@ body::-webkit-scrollbar {
 	color: var(--portfolio-ink);
 	font-size: 0.76rem;
 	font-weight: 600;
+	overflow-wrap: anywhere;
 }
 
 .portfolio-filter-list {
@@ -1119,6 +1140,7 @@ body::-webkit-scrollbar {
 	.portfolio-page-shell {
 		display: block;
 		padding: 0 1rem;
+		overflow-x: clip;
 	}
 
 	.portfolio-sidebar-shell {
@@ -1130,7 +1152,7 @@ body::-webkit-scrollbar {
 	.portfolio-profile-sidebar {
 		position: relative;
 		display: grid;
-		grid-template-columns: auto minmax(220px, 1fr) minmax(220px, 1fr);
+		grid-template-columns: auto repeat(2, minmax(0, 1fr));
 		gap: 1.5rem;
 		width: 100%;
 		height: auto;
@@ -1154,21 +1176,31 @@ body::-webkit-scrollbar {
 		border: 0;
 	}
 
-	.portfolio-skill-group:nth-of-type(n + 3) {
-		display: none;
+	.portfolio-profile-meta a {
+		white-space: normal;
+		overflow-wrap: anywhere;
 	}
 
 	.portfolio-navigation {
 		position: fixed;
-		right: 1rem;
-		top: 4.5rem;
+		right: calc(env(safe-area-inset-right, 0px) + 1rem);
+		top: calc(env(safe-area-inset-top, 0px) + 4.5rem);
 		z-index: 50;
 		display: none;
-		width: 210px;
+		width: min(210px, calc(100vw - 2rem));
+		max-height: calc(100vh - env(safe-area-inset-top, 0px) - 5.5rem);
+		max-height: calc(100dvh - env(safe-area-inset-top, 0px) - 5.5rem);
 		height: auto;
+		overflow-y: auto;
+		overscroll-behavior: contain;
 		border: 1px solid var(--portfolio-line);
 		box-shadow: 0 16px 40px rgb(43 43 43 / 16%);
 		padding: 1rem;
+		scrollbar-width: none;
+	}
+
+	.portfolio-navigation::-webkit-scrollbar {
+		display: none;
 	}
 
 	.portfolio-navigation-open {
@@ -1182,6 +1214,7 @@ body::-webkit-scrollbar {
 	.portfolio-navigation a {
 		display: flex;
 		width: 100%;
+		min-height: 44px;
 		height: auto;
 		justify-content: flex-start;
 		gap: 0.75rem;
@@ -1191,7 +1224,10 @@ body::-webkit-scrollbar {
 
 	.portfolio-navigation span {
 		position: static;
+		width: auto;
+		border-radius: 0;
 		opacity: 1;
+		box-shadow: none;
 		background: transparent;
 		color: inherit;
 		padding: 0;
@@ -1200,8 +1236,8 @@ body::-webkit-scrollbar {
 
 	.portfolio-mobile-menu-button {
 		position: fixed;
-		right: 1rem;
-		top: 1rem;
+		right: calc(env(safe-area-inset-right, 0px) + 1rem);
+		top: calc(env(safe-area-inset-top, 0px) + 1rem);
 		z-index: 60;
 		display: grid;
 		width: 44px;
@@ -1220,30 +1256,91 @@ body::-webkit-scrollbar {
 
 @media (max-width: 760px) {
 	.portfolio-page-shell {
+		display: flex;
+		flex-direction: column;
 		padding: 0;
 	}
 
+	.portfolio-sidebar-shell {
+		order: 2;
+		margin: 1rem;
+	}
+
 	.portfolio-profile-sidebar {
-		grid-template-columns: 1fr 1fr;
+		display: grid;
+		grid-template-columns: 1fr;
 		margin: 0;
 		padding: 1.5rem;
 	}
 
 	.portfolio-profile-header {
-		grid-column: 1 / -1;
+		align-items: center;
+		grid-column: auto;
 		grid-row: auto;
+		justify-content: center;
+		text-align: center;
 	}
 
 	.portfolio-profile-meta {
-		grid-column: 1 / -1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.55rem;
+		text-align: center;
+	}
+
+	.portfolio-profile-meta strong,
+	.portfolio-profile-meta a {
+		justify-content: center;
+		text-align: center;
+		white-space: normal;
+	}
+
+	.portfolio-sidebar-card-track {
+		display: flex;
+		gap: 1rem;
+		margin: 0 -1.5rem;
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		padding: 0 1.5rem 0.25rem;
+		scroll-snap-type: x proximity;
+		scrollbar-width: none;
+	}
+
+	.portfolio-sidebar-card-track::-webkit-scrollbar {
+		display: none;
 	}
 
 	.portfolio-skill-group {
 		display: block;
+		flex: 0 0 min(78vw, 280px);
+		scroll-snap-align: start;
+		border: 1px solid var(--portfolio-amber);
+		border-radius: 18px;
+		background: var(--portfolio-muted);
+		padding: 1rem;
+	}
+
+	.portfolio-skill-row {
+		overflow-wrap: anywhere;
 	}
 
 	.portfolio-main-content {
-		padding: 0 1rem 1rem;
+		display: contents;
+		padding: 0;
+	}
+
+	.portfolio-page-scroll-button {
+		position: fixed;
+		top: auto;
+		right: calc(env(safe-area-inset-right, 0px) + 1rem);
+		bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+		margin: 0;
+	}
+
+	.portfolio-hero {
+		order: 1;
+		margin: 0 1rem;
 	}
 
 	.portfolio-hero {
@@ -1259,11 +1356,29 @@ body::-webkit-scrollbar {
 	}
 
 	.portfolio-section {
+		order: 3;
+		margin-right: 1rem;
+		margin-left: 1rem;
 		padding-top: 4.5rem;
+	}
+
+	.portfolio-footer {
+		order: 4;
+		margin-right: 1rem;
+		margin-left: 1rem;
 	}
 
 	.portfolio-section-heading {
 		margin-bottom: 2rem;
+	}
+
+	.portfolio-publication-link,
+	.portfolio-filter-list button {
+		min-height: 44px;
+	}
+
+	.portfolio-filter-list button {
+		padding: 0 0.25rem;
 	}
 
 	.portfolio-about-profile {
@@ -1282,26 +1397,78 @@ body::-webkit-scrollbar {
 	.portfolio-resume-row {
 		grid-template-columns: 1fr;
 		gap: 1.5rem;
+		min-width: 0;
 	}
 
 	.portfolio-gallery-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		grid-auto-rows: 190px;
 	}
+
+	.portfolio-state-card {
+		padding: 2rem;
+	}
+
+	.portfolio-loading-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.portfolio-loading-sidebar {
+		height: 160px;
+	}
+
+	.portfolio-loading-hero {
+		height: 260px;
+	}
+
+	.portfolio-loading-cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 }
 
 @media (max-width: 480px) {
 	.portfolio-profile-sidebar {
 		grid-template-columns: 1fr;
+		padding: 1.25rem;
 	}
 
-	.portfolio-skill-group:nth-of-type(n + 2) {
-		display: none;
+	.portfolio-profile-meta {
+		justify-content: center;
+		gap: 0.6rem;
+	}
+
+	.portfolio-profile-meta strong,
+	.portfolio-profile-meta a {
+		justify-content: center;
+		text-align: center;
+		white-space: normal;
+	}
+
+	.portfolio-sidebar-card-track {
+		margin: 0 -1.25rem;
+		padding-right: 1.25rem;
+		padding-left: 1.25rem;
+	}
+
+	.portfolio-skill-group {
+		flex-basis: min(84vw, 280px);
 	}
 
 	.portfolio-hero-actions {
 		align-items: stretch;
 		flex-direction: column;
+	}
+
+	.portfolio-hero-copy {
+		padding: 3.25rem 1.15rem 1.75rem;
+	}
+
+	.portfolio-hero h2 {
+		font-size: clamp(1.85rem, 10vw, 2.8rem);
+	}
+
+	.portfolio-section-heading {
+		padding: 0 0.25rem;
 	}
 
 	.portfolio-gallery-grid {
@@ -1314,6 +1481,41 @@ body::-webkit-scrollbar {
 
 	.portfolio-filter-list {
 		gap: 0.8rem 1.2rem;
+	}
+
+	.portfolio-resume-panel,
+	.portfolio-about-profile,
+	.portfolio-service-card,
+	.portfolio-recommendation-card {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+
+	.portfolio-state-page {
+		padding: 1rem;
+	}
+
+	.portfolio-state-card {
+		padding: 1.5rem;
+	}
+
+	.portfolio-state-actions {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.portfolio-state-actions button,
+	.portfolio-state-actions a {
+		justify-content: center;
+		min-height: 44px;
+	}
+
+	.portfolio-loading-hero {
+		height: 220px;
+	}
+
+	.portfolio-loading-cards {
+		grid-template-columns: 1fr;
 	}
 }
 

@@ -68,16 +68,18 @@ export function ProfileSidebar({ data, skillGroups }: ProfileSidebarProps): Reac
 				</a>
 			</div>
 
-			{skillGroups.map((group) => (
-				<section key={group.title} className='portfolio-skill-group'>
-					<h2>{group.title}</h2>
-					{group.items.map((skill) => (
-						<div key={skill} className='portfolio-skill-row'>
-							<span>{skill}</span>
-						</div>
-					))}
-				</section>
-			))}
+			<div className='portfolio-sidebar-card-track' aria-label='Profile skill groups'>
+				{skillGroups.map((group) => (
+					<section key={group.title} className='portfolio-skill-group'>
+						<h2>{group.title}</h2>
+						{group.items.map((skill) => (
+							<div key={skill} className='portfolio-skill-row'>
+								<span>{skill}</span>
+							</div>
+						))}
+					</section>
+				))}
+			</div>
 		</aside>
 	)
 }
