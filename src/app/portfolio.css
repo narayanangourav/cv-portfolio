@@ -194,14 +194,12 @@ body::-webkit-scrollbar {
 	height: 12px;
 }
 
-.portfolio-skill-group,
-.portfolio-profile-list {
+.portfolio-skill-group {
 	padding: 1.25rem 0;
 	border-bottom: 1px solid var(--portfolio-line);
 }
 
-.portfolio-skill-group h2,
-.portfolio-profile-list h2 {
+.portfolio-skill-group h2 {
 	margin-bottom: 0.8rem;
 	font-size: 0.88rem;
 	font-weight: 600;
@@ -219,19 +217,6 @@ body::-webkit-scrollbar {
 .portfolio-skill-row::before {
 	content: '•';
 	margin-right: 0.5rem;
-	color: var(--portfolio-amber);
-}
-
-.portfolio-profile-list ul {
-	display: grid;
-	gap: 0.45rem;
-	color: var(--portfolio-copy);
-	font-size: 0.72rem;
-}
-
-.portfolio-profile-list li::before {
-	content: '◫';
-	margin-right: 0.55rem;
 	color: var(--portfolio-amber);
 }
 
@@ -1164,14 +1149,12 @@ body::-webkit-scrollbar {
 	}
 
 	.portfolio-profile-meta,
-	.portfolio-skill-group,
-	.portfolio-profile-list {
+	.portfolio-skill-group {
 		padding: 0;
 		border: 0;
 	}
 
-	.portfolio-skill-group:nth-of-type(n + 3),
-	.portfolio-profile-list {
+	.portfolio-skill-group:nth-of-type(n + 3) {
 		display: none;
 	}
 

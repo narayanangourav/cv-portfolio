@@ -78,15 +78,6 @@ export function ProfileSidebar({ data, skillGroups }: ProfileSidebarProps): Reac
 					))}
 				</section>
 			))}
-
-			<section className='portfolio-profile-list'>
-				<h2>Languages</h2>
-				<ul>
-					{data.languages.map((language) => (
-						<li key={language}>{language}</li>
-					))}
-				</ul>
-			</section>
 		</aside>
 	)
 }
