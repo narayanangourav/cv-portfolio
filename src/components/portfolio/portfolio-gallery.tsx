@@ -3,13 +3,8 @@
 import { useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 import { PORTFOLIO_CONTENT } from '@/data/portfolio-content'
-import { type Project } from '@/types'
 
-interface PortfolioGalleryProps {
-	projects: Project[]
-}
-
-export function PortfolioGallery({ projects }: PortfolioGalleryProps): React.ReactElement {
+export function PortfolioGallery(): React.ReactElement {
 	const [activeFilter, setActiveFilter] =
 		useState<(typeof PORTFOLIO_CONTENT.portfolioFilters)[number]>('All')
 	const visibleArtwork = PORTFOLIO_CONTENT.portfolioArtwork.filter(
@@ -35,27 +30,22 @@ export function PortfolioGallery({ projects }: PortfolioGalleryProps): React.Rea
 				))}
 			</div>
 			<div className='portfolio-gallery-grid'>
-				{visibleArtwork.map((artwork) => {
-					const project = projects.find((item) => item.title === artwork.projectTitle)
-					return (
-						<a
-							id={`portfolio-project-${artwork.id}`}
-							key={artwork.id}
-							className={`portfolio-artwork portfolio-artwork-${artwork.variant}`}
-							href={project?.link.href ?? '#portfolio'}
-							target={project ? '_blank' : undefined}
-							rel={project ? 'noreferrer' : undefined}
-							aria-label={`View ${artwork.title}`}
-						>
-							<span className='portfolio-artwork-grid' aria-hidden='true' />
-							<span className='portfolio-artwork-label'>
-								<small>{artwork.category}</small>
-								<strong>{artwork.title}</strong>
-							</span>
-							<ExternalLink aria-hidden='true' />
-						</a>
-					)
-				})}
+				{visibleArtwork.map((artwork) => (
+					<button
+						id={`portfolio-project-${artwork.id}`}
+						key={artwork.id}
+						type='button'
+						className={`portfolio-artwork portfolio-artwork-${artwork.variant}`}
+						aria-label={`${artwork.title} project preview`}
+					>
+						<span className='portfolio-artwork-grid' aria-hidden='true' />
+						<span className='portfolio-artwork-label'>
+							<small>{artwork.category}</small>
+							<strong>{artwork.title}</strong>
+						</span>
+						<ExternalLink aria-hidden='true' />
+					</button>
+				))}
 			</div>
 		</>
 	)

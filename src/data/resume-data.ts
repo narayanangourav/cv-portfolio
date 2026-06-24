@@ -101,26 +101,6 @@ export const RESUME_DATA = {
 			]
 		}
 	],
-	achievements: [
-		{
-			id: 'best-project-award',
-			title: 'Best Project Award',
-			issuer: 'Ramaiah Institute Of Technology, Alumni Association',
-			date: 'May 2024',
-			associatedWith: 'Ramaiah Institute Of Technology',
-			description:
-				'Received the Best Project Award from the Ramaiah Institute of Technology Alumni Association in May 2024 for the project "Enhancing workflow scheduling in cloud computing with a bio-inspired algorithm."',
-			details: [
-				'The project focused on improving cloud task scheduling using Java and CloudSim by optimizing resource allocation, reducing execution time, and improving workflow performance through an enhanced scheduling algorithm.'
-			]
-		},
-		{
-			title: 'Research Publication',
-			description:
-				'“Improving The Performance of An Advanced Algorithm for Task flow Scheduling In Cloud Computing.”',
-			year: ''
-		}
-	],
 	publications: [
 		{
 			id: 'cloud-taskflow-scheduling',
@@ -142,20 +122,33 @@ export const RESUME_DATA = {
 	],
 	certifications: [
 		{
-			id: 'python-basic-certificate',
-			title: 'Python (Basic) Certificate'
-		},
-		{
-			id: 'introduction-to-python',
-			title: 'Introduction to Python'
-		},
-		{
-			id: 'java-basic',
-			title: 'Java (Basic)'
-		},
-		{
 			id: 'crash-course-on-python',
-			title: 'Crash Course on Python'
+			title: 'Crash Course on Python',
+			issuer: 'Coursera',
+			link: {
+				label: 'Show credential',
+				href: 'https://www.coursera.org/account/accomplishments/certificate/KLGKSCULDNE6'
+			},
+			skills: [
+				{
+					name: 'Python'
+				}
+			]
+		},
+		{
+			id: 'cybersecurity-toolkit',
+			title: 'CYB003x: Building a Cybersecurity Toolkit',
+			issuer: 'edX',
+			link: {
+				label: 'Show credential',
+				href: 'https://courses.edx.org/certificates/4f5991968ffd491db9a9475e269e107b'
+			},
+			skills: [
+				{
+					name: 'Security',
+					url: 'https://www.linkedin.com/in/narayana-n-gourav/overlay/1937006398/skill-associations-details/'
+				}
+			]
 		},
 		{
 			id: 'windows-server-management-security',
@@ -163,7 +156,7 @@ export const RESUME_DATA = {
 			issuer: 'Coursera',
 			link: {
 				label: 'Show credential',
-				href: 'https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww%2Ecoursera%2Eorg%2Faccount%2Faccomplishments%2Fverify%2F5BS44SZVYUJQ&urlhash=xec-&mt=fBKcxT-fsJ_i1M07g_aZNcBF1lrLXumoboudBT6jyJmA7xGJB8aQWu-CN5Gxhf-ty96OD8axYkDMMdFU0dNgszVOntg&isSdui=true'
+				href: 'https://www.coursera.org/account/accomplishments/verify/5BS44SZVYUJQ'
 			},
 			skills: [
 				{

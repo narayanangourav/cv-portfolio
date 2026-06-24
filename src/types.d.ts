@@ -52,16 +52,6 @@ export interface PersonalWebsiteUrl {
 	url: string
 }
 
-export interface AchievementEntry {
-	id: string
-	title: string
-	issuer: string
-	date: string
-	associatedWith: string
-	description: string
-	details: string[]
-}
-
 export interface PublicationEntry {
 	id: string
 	title: string
@@ -115,7 +105,6 @@ export interface ResumeData {
 	contact: ContactInfo
 	education: EducationEntry[]
 	work: WorkEntry[]
-	achievements: AchievementEntry[]
 	publications: PublicationEntry[]
 	awards: AwardEntry[]
 	certifications: CertificationEntry[]

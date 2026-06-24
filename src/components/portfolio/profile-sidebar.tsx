@@ -24,7 +24,7 @@ export function ProfileSidebar({ data, skillGroups }: ProfileSidebarProps): Reac
 						src={getPublicPath(data.avatar)}
 						alt={`${data.name} portrait`}
 						width={140}
-						height={140}
+						height={170}
 						priority
 					/>
 				</div>

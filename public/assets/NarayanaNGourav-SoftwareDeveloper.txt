@@ -152,14 +152,19 @@ The results showed that the Improved Max-Min algorithm delivered better scheduli
 
 CERTIFICATIONS
 
-- Python (Basic) Certificate
-- Introduction to Python
-- Java (Basic)
-- Crash Course on Python
+Crash Course on Python
+Coursera
+Show credential: https://www.coursera.org/account/accomplishments/certificate/KLGKSCULDNE6
+Skills: Python
+
+CYB003x: Building a Cybersecurity Toolkit
+edX
+Show credential: https://courses.edx.org/certificates/4f5991968ffd491db9a9475e269e107b
+Skills: Security
 
 Windows Server Management and Security
 Coursera
-Show credential: https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww%2Ecoursera%2Eorg%2Faccount%2Faccomplishments%2Fverify%2F5BS44SZVYUJQ&urlhash=xec-&mt=fBKcxT-fsJ_i1M07g_aZNcBF1lrLXumoboudBT6jyJmA7xGJB8aQWu-CN5Gxhf-ty96OD8axYkDMMdFU0dNgszVOntg&isSdui=true
+Show credential: https://www.coursera.org/account/accomplishments/verify/5BS44SZVYUJQ
 Skills: Windows, Security
 
 HONORS & AWARDS

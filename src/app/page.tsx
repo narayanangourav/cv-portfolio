@@ -58,7 +58,7 @@ export default function Page(): React.ReactElement {
 						certifications={data.certifications}
 						awards={data.awards}
 					/>
-					<PortfolioAndBlog projects={data.projects} />
+					<PortfolioAndBlog />
 					<footer className='portfolio-footer'>
 						<p>
 							© {new Date().getFullYear()} {data.name}. {PORTFOLIO_CONTENT.footerText}
