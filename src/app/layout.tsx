@@ -12,6 +12,11 @@ export const metadata: Metadata = {
 	title: `CV | ${RESUME_DATA.name}`,
 	description: `${RESUME_DATA.about}`,
 	manifest: getPublicPath('/site.webmanifest'),
+	icons: {
+		icon: getPublicPath('/assets/logo.png'),
+		shortcut: getPublicPath('/assets/logo.png'),
+		apple: getPublicPath('/assets/logo.png')
+	},
 	keywords: [
 		'Software Developer',
 		'Full Stack Developer',
