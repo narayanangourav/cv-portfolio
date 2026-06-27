@@ -4,7 +4,7 @@ This file is the first-read orientation source for Codex. Agents must read this 
 
 ## Repository purpose
 
-This repository contains Narayana N Gourav's personal software developer portfolio. It is a static-exportable Next.js App Router site with portfolio content, resume data, profile/sidebar UI, and a downloadable plain-text resume.
+This repository contains Narayana N Gourav's personal software developer portfolio. It is a static-exportable Next.js App Router site with portfolio content, resume data, profile/sidebar UI, a downloadable PDF resume, and a maintained plain-text resume copy.
 
 Evidence: `README.md`, `package.json`, `src/app/page.tsx`, `src/data/resume-data.ts`, `src/data/portfolio-content.ts`.
 
@@ -55,7 +55,7 @@ Evidence: `src/app/*`.
 - `src/hooks`: shared scroll control hook.
 - `src/lib`: utility functions, public path helper, and portfolio view-model transformations.
 - `src/constants`: exports canonical resume data as `data`.
-- `public/assets`: public avatar and downloadable resume text file.
+- `public/assets`: public avatar, downloadable PDF resume, and maintained plain-text resume copy.
 - `.github/workflows`: GitHub Pages deployment workflow.
 
 Evidence: inspected directory structure and imports in `src/app/page.tsx`.
@@ -67,7 +67,8 @@ Evidence: inspected directory structure and imports in `src/app/page.tsx`.
 - `src/constants/index.ts` exports `RESUME_DATA` as typed `data`.
 - `src/lib/portfolio-view-model.ts` derives sidebar skill groups, stats, and summary paragraphs.
 - `src/app/page.tsx` composes the portfolio page from the data, view-model helpers, and portfolio components.
-- Downloadable resume content is maintained separately in `public/assets/NarayanaNGourav-SoftwareDeveloper.txt`.
+- The Download CV button uses `RESUME_DATA.resumeFileName` from `src/data/resume-data.ts`, currently pointing to `public/assets/NarayanaNGourav-SoftwareDeveloper.pdf`.
+- `public/assets/NarayanaNGourav-SoftwareDeveloper.txt` is maintained as a plain-text resume copy and should stay aligned with visible resume content when resume details change.
 
 Evidence: `src/app/page.tsx`, `src/constants/index.ts`, `src/lib/portfolio-view-model.ts`.
 
@@ -119,7 +120,8 @@ Evidence: existing component/data separation and project guidance in the user-pr
 
 ## Known risks and files requiring care
 
-- `public/assets/NarayanaNGourav-SoftwareDeveloper.txt` is the downloadable resume; keep it in sync with displayed resume data when content changes.
+- `public/assets/NarayanaNGourav-SoftwareDeveloper.pdf` is the current Download CV asset; keep `RESUME_DATA.resumeFileName` aligned with the intended downloadable file.
+- `public/assets/NarayanaNGourav-SoftwareDeveloper.txt` is a maintained plain-text resume copy; keep it in sync with displayed resume data when content changes.
 - `next.config.js` controls GitHub Pages base path/static export behavior; changes can break hosted assets/routes.
 - `.github/workflows/deploy-pages.yml` controls Pages deployment.
 - `.next`, `out`, and `tsconfig.tsbuildinfo` are generated artifacts and should not be edited casually or committed.

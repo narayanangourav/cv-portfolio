@@ -19,7 +19,7 @@ Evidence: `.codex/memory-map.md`.
 - `src/data`: centralized resume and portfolio content.
 - `src/lib`: public path helper, utilities, and portfolio view-model helpers.
 - `src/hooks`: shared client-side hooks.
-- `public/assets`: avatar and downloadable text resume.
+- `public/assets`: avatar, downloadable PDF resume, and maintained plain-text resume copy.
 - `.github/workflows/deploy-pages.yml`: GitHub Pages deployment.
 
 Evidence: `src/app/page.tsx`, `README.md`.
@@ -80,6 +80,8 @@ Evidence: `package.json`.
 ## Safety rules
 
 - Do not edit generated artifacts such as `.next`, `out`, `tsconfig.tsbuildinfo`, or `node_modules`.
+- Keep `src/data/resume-data.ts` `resumeFileName` aligned with the intended Download CV asset.
+- The current Download CV asset is `public/assets/NarayanaNGourav-SoftwareDeveloper.pdf`.
 - Keep `public/assets/NarayanaNGourav-SoftwareDeveloper.txt` aligned with visible resume content when resume details change.
 - Be careful with `next.config.js` and `.github/workflows/deploy-pages.yml`; they control GitHub Pages base path and deployment.
 - Do not remove `.agents`; it may be protected/read-only and is not part of the app build.

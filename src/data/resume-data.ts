@@ -3,7 +3,7 @@ import { GitHubIcon, LinkedInIcon } from '@/components/icons'
 export const RESUME_DATA = {
 	name: 'Narayana N Gourav',
 	initials: 'NG',
-	resumeFileName: 'NarayanaNGourav-SoftwareDeveloper.txt',
+	resumeFileName: 'NarayanaNGourav-SoftwareDeveloper.pdf',
 	yearsExperience: '2+',
 	location: 'Greater Bengaluru Area',
 	locationLink: 'https://www.google.com/maps/place/Bengaluru',
