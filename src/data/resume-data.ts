@@ -10,7 +10,7 @@ export const RESUME_DATA = {
 	about:
 		"Most software systems don't fail because of bad ideas - they fail because they can't scale when it matters most.",
 	summary:
-		"Most software systems don't fail because of bad ideas - they fail because they can't scale when it matters most.\n\nI'm Narayana, a Software Engineer with 2+ years of experience building full-stack systems and cloud-native solutions that hold up under real pressure.\n\nThe problem I keep solving? Products that work in demos but break in production. At Chimple Learning, I inherited an app with 100K+ downloads and a growing user base - and the infrastructure wasn't keeping pace. Data pipelines were fragile, SQL queries were slow, and onboarding was leaking users.\n\nSo I got to work.\n\nI architected a serverless operations console using RPC and REST APIs that brought real-time data visibility to the team. I rebuilt the database migration pipeline from scratch - zero failures, fully automated via GitHub Actions. I optimized SQL queries and data flows to cut load times. I built authentication pipelines that onboarded 5,000+ users without a hitch. And I helped push application uptime for a system serving users across low-connectivity environments.\n\nBefore that, at Continental AM, I automated project dependency analysis using Python and GitHub APIs - cutting manual effort by 70%. I also reduced Polyspace reporting time by 80% through custom automation scripts. Small numbers, big impact on engineering hours.\n\nI work across Python, Java, React, Docker, Kubernetes, AWS, and more - but what I care about most is that the system actually works when real users hit it.",
+		"Most software systems don't fail because of bad ideas - they fail because they can't scale when it matters most.\n\nI'm Narayana, a Software Engineer with 2+ years of experience building full-stack systems and cloud-native solutions that hold up under real pressure.\n\nThe problem I keep solving? Products that work in demos but break in production. At Chimple Learning, I inherited an app with 100K+ downloads and a growing user base - and the infrastructure wasn't keeping pace. Data pipelines were fragile, SQL queries were slow, and onboarding was leaking users.\n\nSo I got to work.\n\nI architected a serverless operations console using RPC and REST APIs that brought real-time data visibility to the team. I rebuilt the database migration pipeline from scratch - zero failures, fully automated via GitHub Actions. I optimized SQL queries and data flows to cut load times. I built authentication pipelines that onboarded 5,000+ users without a hitch. And I helped push application uptime for a system serving users across low-connectivity environments.\n\nBefore that, at Continental AM, I automated project dependency analysis using Python and GitHub APIs - cutting manual effort by 70%. I also reduced Polyspace reporting time by 80% through custom automation scripts. Small numbers, big impact on engineering hours.\n\nI work across Python, Java, React, Docker, Kubernetes, AWS, and more - but what I care about most is that the system actually works when real users hit it.\n\nI use OpenAI and Codex-assisted development workflows to accelerate requirement analysis, debugging, refactoring, test-case generation, documentation, and code review support while validating output through manual review, testing, and production-safe engineering practices.",
 	avatar: '/assets/avatar.jpg',
 	personalWebsiteUrl: {
 		name: 'GitHub',
@@ -69,6 +69,7 @@ export const RESUME_DATA = {
 						'Engineered a zero-failure PostgreSQL migration pipeline from development to production with end-to-end GitHub Actions automation.',
 						'Optimized SQL queries and data flows to reduce load times and strengthen offline reliability in low-connectivity environments.',
 						'Built serverless authentication pipelines that onboarded 5,000+ production users while improving activation and retention flows.',
+						'Used OpenAI and Codex-assisted workflows at Chimple for requirement breakdown, debugging, refactoring, test-case preparation, documentation, and code review support, with final validation through manual review and testing.',
 						'Resolved critical synchronization bugs and edge cases, improving application stability and uptime.'
 					]
 				},
@@ -237,6 +238,15 @@ export const RESUME_DATA = {
 		'SOLID Principles',
 		'Clean Code',
 		'Microservices',
+		'OpenAI',
+		'Codex',
+		'prompt engineering',
+		'debugging assistance',
+		'code review support',
+		'test-case generation',
+		'documentation support',
+		'log analysis',
+		'refactoring support',
 		'Project Management',
 		'Problem Solving',
 		'Agile Methodologies',
@@ -247,7 +257,7 @@ export const RESUME_DATA = {
 			title: 'Chimple Serverless Operations Console',
 			techStack: ['TypeScript', 'React', 'PostgreSQL', 'RPC APIs', 'REST APIs'],
 			description:
-				'Architected a serverless operations console for real-time production data visibility and lower interaction latency.',
+				'Architected a serverless operations console for real-time production data visibility and lower interaction latency. Applied OpenAI and Codex-assisted development practices to compare implementation approaches, debug issues, generate edge-case test scenarios, and improve code/documentation quality.',
 			link: {
 				label: 'chimple.org',
 				href: 'https://www.chimple.org/'
@@ -257,7 +267,7 @@ export const RESUME_DATA = {
 			title: 'Zero-Failure Database Migration Pipeline',
 			techStack: ['PostgreSQL', 'GitHub Actions', 'SQL'],
 			description:
-				'Automated repeatable database migration from development to production with no manual intervention.',
+				'Automated repeatable database migration from development to production with no manual intervention. Applied OpenAI and Codex-assisted development practices to compare implementation approaches, debug issues, generate edge-case test scenarios, and improve code/documentation quality.',
 			link: {
 				label: 'chimple.org',
 				href: 'https://www.chimple.org/'
@@ -267,7 +277,7 @@ export const RESUME_DATA = {
 			title: 'Production Authentication Pipeline',
 			techStack: ['Serverless Functions', 'REST APIs', 'PostgreSQL'],
 			description:
-				'Built authentication and onboarding pipelines that moved 5,000+ users into production reliably.',
+				'Built authentication and onboarding pipelines that moved 5,000+ users into production reliably. Applied OpenAI and Codex-assisted development practices to compare implementation approaches, debug issues, generate edge-case test scenarios, and improve code/documentation quality.',
 			link: {
 				label: 'chimple.org',
 				href: 'https://www.chimple.org/'
@@ -277,7 +287,7 @@ export const RESUME_DATA = {
 			title: 'Polyspace Release Automation',
 			techStack: ['Python', 'OpenPyXL', 'VBA', 'Robocopy'],
 			description:
-				'Automated static-analysis reports, macro execution, artifact packaging, and shared-drive publishing across tool versions.',
+				'Automated static-analysis reports, macro execution, artifact packaging, and shared-drive publishing across tool versions. Applied OpenAI and Codex-assisted development practices to compare implementation approaches, debug issues, generate edge-case test scenarios, and improve code/documentation quality.',
 			link: {
 				label: 'github.com/narayanangourav',
 				href: 'https://github.com/narayanangourav/'
@@ -287,7 +297,7 @@ export const RESUME_DATA = {
 			title: 'GitHub Enterprise Analytics Platform',
 			techStack: ['Flask', 'MongoDB', 'Pandas', 'Jinja2', 'GitHub REST API'],
 			description:
-				'Created traceable cross-repository release analysis with dependency comparison and downloadable Excel reports.',
+				'Created traceable cross-repository release analysis with dependency comparison and downloadable Excel reports. Applied OpenAI and Codex-assisted development practices to compare implementation approaches, debug issues, generate edge-case test scenarios, and improve code/documentation quality.',
 			link: {
 				label: 'github.com/narayanangourav',
 				href: 'https://github.com/narayanangourav/'

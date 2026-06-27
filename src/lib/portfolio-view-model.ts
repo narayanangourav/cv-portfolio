@@ -31,7 +31,7 @@ const SKILL_GROUPS = [
 		]
 	},
 	{
-		title: 'Frameworks &Libraries',
+		title: 'Frameworks & Libraries',
 		names: [
 			'React',
 			'Flask',
@@ -75,6 +75,20 @@ const SKILL_GROUPS = [
 			'SOLID Principles',
 			'Clean Code',
 			'Microservices'
+		]
+	},
+	{
+		title: 'AI-assisted development',
+		names: [
+			'OpenAI',
+			'Codex',
+			'prompt engineering',
+			'debugging assistance',
+			'code review support',
+			'test-case generation',
+			'documentation support',
+			'log analysis',
+			'refactoring support'
 		]
 	},
 	{
